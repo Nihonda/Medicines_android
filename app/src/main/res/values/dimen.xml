@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_suggestInputInsetVertical">4dp</dimen>
+    <dimen name="padding_suggestInputInsetHorizontal">6dp</dimen>
+    <dimen name="padding_searchInputInsetHorizontal">6dp</dimen>
+    <dimen name="fontSize_suggestInput">14sp</dimen>
+    <dimen name="fontSize_home_header_text">16sp</dimen>
+    <dimen name="fontSize_home_result_count">36sp</dimen>
+    <dimen name="padding_content">8sp</dimen>
+    <dimen name="margin_home_betweenButtonCells">16dp</dimen>
+    <dimen name="margin_home_buttonsBottom">20dp</dimen>
+</resources>

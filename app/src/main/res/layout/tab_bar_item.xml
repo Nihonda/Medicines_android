@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.medicines_android.widget.tabbar.TabBarItem
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:weightSum="100"
+    android:orientation="vertical">
+
+    <!-- ICON IMAGE -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grayLight"/>
+
+    <ImageView
+        android:id="@+id/tabIcon"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
+        android:layout_weight="70.0"
+        android:adjustViewBounds="true"
+        android:layout_gravity="center" />
+
+</com.android.medicines_android.widget.tabbar.TabBarItem>

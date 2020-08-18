@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/white">
+
+        <!-- RECORD NUMBER WRAPPER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@android:color/white"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="0.45">
+
+                <!-- RECORD NUMBER LABEL -->
+                <TextView
+                    android:id="@+id/recordsLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/recordsWord"
+                    android:layout_toStartOf="@+id/recordsWord"
+                    android:paddingBottom="5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold"
+                    android:textSize="32sp"/>
+
+                <!-- 件 -->
+                <TextView
+                    android:id="@+id/recordsWord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:paddingLeft="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingEnd="5dp"
+                    android:paddingBottom="10dp"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="#29292C"
+                    android:textStyle="bold"
+                    android:textSize="14sp"/>
+
+            </RelativeLayout>
+
+            <!-- SPACING -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.025"/>
+
+            <!-- TOP BORDER -->
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#F0F0F2"/>
+
+            <!-- SPACING -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.025"/>
+
+            <!-- 設定済みエリア表示エリア (設定済み) -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.45"
+                android:orientation="vertical">
+
+                <!-- SELECTED AREA LABEL -->
+                <TextView
+                    android:id="@+id/selectedPrefLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:lines="3"
+                    android:ellipsize="end"
+                    android:textStyle="bold"
+                    android:background="@android:color/white"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+            <!-- SPACING -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.05"/>
+
+        </LinearLayout>
+
+        <!-- MARGIN -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/header_home_text"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:textSize="@dimen/fontSize_home_header_text"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/result_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/result_count_number"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:textSize="@dimen/fontSize_home_result_count"
+                android:textColor="@color/result_count_number"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+
+        <!-- MARGIN -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/search_bar_title"
+                android:textSize="@dimen/fontSize_home_header_text"
+                android:paddingStart="18dp"
+                android:paddingBottom="5dp"/>
+
+            <!-- SUGGEST WRAPPER -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:paddingLeft="18dp"
+                android:paddingStart="18dp"
+                android:paddingTop="10dp"
+                android:paddingRight="18dp"
+                android:paddingEnd="18dp"
+                android:paddingBottom="10dp"
+                android:orientation="horizontal">
+
+                <!-- SUGGEST INPUT DIVISION -->
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <!-- FOCUS BUCKET: Not to make SuggestInput have focus on opening the page. -->
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true">
+
+                        <requestFocus/>
+
+                    </View>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/img_search_background_text"
+                        android:scaleType="fitXY"/>
+
+                    <!-- 拡大鏡 -->
+                    <ImageView
+                        android:id="@+id/ic_loupe"
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/ic_search"
+                        android:scaleType="fitStart"
+                        tools:ignore="RtlHardcoded" />
+
+                    <!-- INPUT FIELD -->
+                    <TextView
+                        android:id="@+id/suggestInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom"
+                        android:paddingLeft="@dimen/padding_suggestInputInsetHorizontal"
+                        android:paddingStart="@dimen/padding_suggestInputInsetHorizontal"
+                        android:paddingTop="@dimen/padding_suggestInputInsetVertical"
+                        android:paddingRight="@dimen/padding_suggestInputInsetHorizontal"
+                        android:paddingEnd="@dimen/padding_suggestInputInsetHorizontal"
+                        android:paddingBottom="@dimen/padding_suggestInputInsetVertical"
+                        android:textColorHint="@android:color/darker_gray"
+                        android:completionThreshold="2"
+                        android:inputType="text"
+                        android:layout_toRightOf="@+id/ic_loupe"
+                        android:layout_toEndOf="@+id/ic_loupe"
+                        android:textSize="@dimen/fontSize_suggestInput"
+                        android:maxLines="1" />
+
+                </RelativeLayout>
+
+                <!-- SEARCH BUTTON -->
+                <ImageButton
+                    android:id="@+id/searchBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/btn_barcode_search"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@null"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- MARGIN -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="16dp"/>
+
+        <!-- BUTTONS WRAPPER -->
+        <android.widget.GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/padding_content"
+            android:paddingStart="@dimen/padding_content"
+            android:paddingRight="@dimen/padding_content"
+            android:paddingEnd="@dimen/padding_content">
+
+            <!-- LocationPath BUTTON -->
+            <ImageButton
+                android:id="@+id/openAddressBtn"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:background="@null"/>
+
+            <!-- HORIZONTAL MARGIN MIDDLE -->
+            <View
+                android:layout_width="@dimen/margin_home_betweenButtonCells"
+                android:layout_height="0dp"
+                android:layout_row="0"
+                android:layout_column="1"/>
+
+            <!-- SEARCH BUTTON -->
+            <ImageButton
+                android:id="@+id/openLineBtn"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:background="@null"/>
+
+            <!-- VERTICAL MARGIN MIDDLE -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/margin_home_betweenButtonCells"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_columnSpan="3"/>
+
+        </android.widget.GridLayout>
+
+        <!-- MARGIN BOTTOM -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_home_buttonsBottom"/>
+
+    </LinearLayout>
+
+    <!-- CLICK INTERCEPTOR: to finish editing on touch outside of input fields -->
+    <View
+        android:id="@+id/clickInterceptor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+</FrameLayout>

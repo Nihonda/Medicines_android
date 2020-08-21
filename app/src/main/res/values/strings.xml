@@ -3,4 +3,5 @@
     <string name="header_home_text">Всего</string>
     <string name="result_count_number">5750 шт.</string>
     <string name="search_bar_title">Поиск по всем лекарствам</string>
+    <string name="msg_noResults">Результаты не найдены</string>
 </resources>
